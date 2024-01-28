@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code List</title>
+</head>
+<body>
+    <h1>QR Code List</h1>
+
+    <% if (qrCodes.length > 0) { %>
+        <ul>
+            <% qrCodes.forEach(qrCode => { %>
+                <li>
+                    <img src="<%= qrCode.QRcode %>">
+                    <%= `QR Code for ${qrCode.name || qrCode.content}` %>
+                    
+                    <!-- Check the type of QR code -->
+                    <% if (qrCode.type === 'personal') { %>
+                        <a href="<%= `/profile/edit/${qrCode._id}` %>">Modify</a>
+                    <% } else if (qrCode.type==="text") { %>
+                        <a href="<%= `/text/edit/${qrCode._id}` %>">Modify</a>
+                    <% } else if (qrCode.type==="link") { %>
+                        <a href="<%= `/link/edit/${qrCode._id}` %>">Modify</a>
+                    <% } %>
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No QR codes generated yet.</p>
+    <% } %>
+</body>
+</html>

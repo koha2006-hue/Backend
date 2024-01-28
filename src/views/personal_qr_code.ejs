@@ -1,0 +1,27 @@
+<!-- personal_qr_code.ejs -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal QR code</title>
+</head>
+<body>
+    <h1>Personal QR code</h1>
+    <form action="/personalQR/generate/<%=id%>" method="POST">
+        <input type="text" name="name" id="name" placeholder="Enter your name">
+        <input type="text" name="email" id="email" placeholder="Enter your email">
+        <input type="text" name="phone" id="phone" placeholder="Enter your phone number">
+        <input type="text" name="address" id="address" placeholder="Enter your address">
+        <input type="text" name="website" id="website" placeholder="Enter your website">
+        <input type="text" name="company" id="company" placeholder="Enter your company">
+        <input type="text" name="position" id="position" placeholder="Enter your position">
+        <button type="submit" name="generate" value="Generate QR code">Generate QR code</button>
+
+        
+    </form>
+    <!-- Show the QR code image if it exists -->
+  
+
+    
+</body>
+</html>

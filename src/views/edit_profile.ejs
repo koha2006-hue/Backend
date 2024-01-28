@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <h1>Edit Profile</h1>
+    <form action="<%= `/personalQR/profile/${qrCode._id}` %>" method="get">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= qrCode.name %>">
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" value="<%= qrCode.email %>">
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" value="<%= qrCode.phone %>">
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" value="<%= qrCode.address %>">
+
+        <label for="website">Website:</label>
+        <input type="text" id="website" name="website" value="<%= qrCode.website %>">
+
+        <label for="company">Company:</label>
+        <input type="text" id="company" name="company" value="<%= qrCode.company %>">
+
+        <label for="position">Position:</label>
+        <input type="text" id="position" name="position" value="<%= qrCode.position %>">
+
+        <!-- Add other input fields for additional personal data -->
+
+        <button type="submit">Save Changes</button>
+    </form>
+    <form action ="<%= `/qrList/list` %>" method="get">
+        <button type="submit" name="qrList" value="qrList">QR List</button>
+    </form>
+</body>
+</html>

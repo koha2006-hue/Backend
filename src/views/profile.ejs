@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/vcard.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+</head>
+<body class = "container">
+    <div class = "profileBox">
+    <img src="/frame_0_delay-0.01s.jpg" alt="Blue Image" class="profile-pic" >
+    
+    <h1><%= name %></h1>
+    <h2><%= position %> at <%= company %></h2>
+    <div class="profileBottom">
+    
+    <p> <img src="/icons8-phone-32.png" alt="PhoneNumber" > <span><%= phone %></span></p>
+    <p> <img src="/icons8-mail-32.png" alt="Email" > <span><%= email %></span></p>
+    
+    <p> <img src="/icons8-place-32.png" alt="Address" > <span><%= address %></span></p>
+    <p> <img src="/icons8-internet-32.png" alt="Web" ><span><%= website %></span></p>
+    </div>
+    
+    </div>
+</body>
+</html>

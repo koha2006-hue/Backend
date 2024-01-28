@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR code Generation Interface</title>
+</head>
+<body>
+    <h1>QR code Generation Interface</h1>
+    
+    <form action="/link/generate" method="GET">
+        <button type="submit" name="link" value="Link">Link</button>
+    </form>
+
+    <form action="/text/generate" method="GET">
+        <button type="submit" name="text" value="Text">Text</button>
+    </form>
+
+    <form action = "/qr_image" method="GET">
+        <button type="submit" name="image" value="image">Image</button>
+    </form>
+
+    <form action="/personalQR/generate" method="GET">
+        <button name="personal" value="Personal">Personal</button>
+    </form>
+
+    <form action="/logout" method="GET">
+        <button type="submit" name="logout" value="Logout">Logout</button>
+    </form>
+
+    <form action="/user" method="GET">
+        <button type="submit" name="user" value="User">User</button>
+    </form>
+    <form action ="/qrList/list" method="get">
+        <button type="submit" name="qrList" value="qrList">QR List</button>
+    </form>
+</body>
+</html>

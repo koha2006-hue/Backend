@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image</title>
+</head>
+<body>
+    <h1>QR Code Generator</h1>
+  
+  <form action="/qr_image" method="POST" enctype="multipart/form-data">
+    <label for="image">Upload an image:</label>
+    <input type="file" name="image" accept="image/*">
+
+    <br>
+
+    <label for="imageUrl">Or enter an image URL:</label>
+    <input type="text" name="imageUrl">
+
+    <br>
+
+    <button type="submit">Generate QR Code</button>
+  </form>
+
+</body>
+</html>
